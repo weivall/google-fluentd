@@ -112,7 +112,7 @@ COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
 
 # Add parkmo config
-ADD config.d /etc/google-fluentd/
+ADD config.d /etc/google-fluentd/config.d
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/sbin/google-fluentd"]
