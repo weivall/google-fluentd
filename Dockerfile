@@ -109,6 +109,8 @@ RUN apt-get update \
 ENV LD_PRELOAD=/opt/google-fluentd/embedded/lib/libjemalloc.so
 
 COPY entrypoint.sh /
+RUN chmod +x /entrypoint.sh
+
 # Add parkmo config
 ADD config.d /etc/google-fluentd/
 
